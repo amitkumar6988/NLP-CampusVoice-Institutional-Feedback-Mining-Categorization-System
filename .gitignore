@@ -1,0 +1,39 @@
+# Environment files and local secrets
+.env
+.env.*
+!.env.example
+
+# Python environments, bytecode, and test caches
+.venv/
+venv/
+env/
+nlpvenv/
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Generated model and evaluation artifacts (recreated by backend training)
+backend/artifacts/*.joblib
+backend/artifacts/evaluation_report.json
+
+# Frontend dependencies and generated build output
+frontend/node_modules/
+frontend/dist/
+frontend/dist-ssr/
+
+# Local editor and operating-system files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+
+# Logs and temporary files
+*.log
+*.tmp

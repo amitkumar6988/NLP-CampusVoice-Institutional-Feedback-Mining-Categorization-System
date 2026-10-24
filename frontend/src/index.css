@@ -1,0 +1,165 @@
+@import 'tailwindcss';
+
+@theme {
+  --color-slate-950: #faf6ef;
+  --color-slate-900: #fffdf9;
+  --color-slate-800: #f5e8dc;
+  --color-slate-700: #ead8c7;
+  --color-slate-600: #d6c1ad;
+  --color-slate-500: #b39d89;
+  --color-slate-400: #88776a;
+  --color-slate-300: #6d5e52;
+  --color-slate-200: #51443a;
+  --color-slate-100: #352c25;
+  --color-sky-50: #fff4ed;
+  --color-sky-100: #ffe5d6;
+  --color-sky-200: #f5c6ad;
+  --color-sky-300: #c77b5c;
+  --color-sky-400: #ae6246;
+  --color-sky-500: #e9a17f;
+  --color-sky-600: #d98a68;
+  --color-sky-700: #a9583b;
+  --color-sky-800: #83442f;
+  --color-sky-900: #5b3025;
+  --color-violet-200: #806719;
+  --color-violet-300: #8d7014;
+  --color-violet-400: #e5ca58;
+  --color-violet-500: #f1df83;
+  --color-emerald-200: #496342;
+  --color-emerald-300: #526f49;
+  --color-emerald-400: #819a70;
+  --color-emerald-500: #a8bd97;
+  --color-amber-200: #795713;
+  --color-amber-300: #866117;
+  --color-amber-500: #e5c568;
+  --color-red-200: #914f47;
+  --color-red-500: #d98b7e;
+}
+
+:root {
+  color: #352c25;
+  background: #faf6ef;
+  font-family: Inter, 'Aptos', 'Segoe UI', sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html,
+body,
+#root {
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at top left, rgba(233, 161, 127, 0.28), transparent 34%),
+    radial-gradient(circle at bottom right, rgba(241, 223, 131, 0.2), transparent 36%),
+    #faf6ef;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+::selection {
+  color: #352c25;
+  background: #f5c6ad;
+}
+
+.text-white {
+  color: #352c25;
+}
+
+.rounded-3xl[class~="bg-slate-900"],
+.rounded-3xl[class~="bg-slate-900/90"],
+.rounded-3xl[class~="bg-slate-900/95"] {
+  background-color: rgba(255, 253, 249, 0.78);
+  border-color: rgba(255, 255, 255, 0.84);
+  box-shadow:
+    0 18px 45px rgba(105, 76, 53, 0.08),
+    inset 0 1px 0 rgba(255, 255, 255, 0.82);
+  -webkit-backdrop-filter: blur(18px) saturate(138%);
+  backdrop-filter: blur(18px) saturate(138%);
+}
+
+.rounded-2xl[class~="bg-slate-800"]:not(input):not(textarea):not(select):not(button) {
+  background-color: rgba(245, 232, 220, 0.62);
+  border-color: rgba(255, 255, 255, 0.68);
+  box-shadow:
+    0 8px 24px rgba(105, 76, 53, 0.045),
+    inset 0 1px 0 rgba(255, 255, 255, 0.7);
+  -webkit-backdrop-filter: blur(14px) saturate(128%);
+  backdrop-filter: blur(14px) saturate(128%);
+}
+
+.app-density-compact .rounded-3xl {
+  padding: 1rem;
+}
+
+.app-density-compact .rounded-2xl {
+  padding: 0.75rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+@media print {
+  @page {
+    size: landscape;
+    margin: 14mm;
+  }
+
+  body,
+  .app-shell {
+    background: #fff !important;
+    color: #222 !important;
+  }
+
+  aside,
+  header,
+  .no-print {
+    display: none !important;
+  }
+
+  .app-shell > div {
+    max-width: none !important;
+    padding: 0 !important;
+  }
+
+  .rounded-3xl[class~="bg-slate-900"],
+  .rounded-3xl[class~="bg-slate-900/90"],
+  .rounded-3xl[class~="bg-slate-900/95"],
+  .rounded-2xl[class~="bg-slate-800"]:not(input):not(textarea):not(select):not(button) {
+    background: #fff !important;
+    border-color: #ddd !important;
+    box-shadow: none !important;
+    -webkit-backdrop-filter: none !important;
+    backdrop-filter: none !important;
+  }
+
+  .report-filters {
+    break-inside: avoid;
+  }
+
+  section,
+  article {
+    break-inside: avoid;
+  }
+}
